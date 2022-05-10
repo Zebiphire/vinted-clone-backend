@@ -177,6 +177,12 @@ router.get("/offers", async (req, res) => {
         message: "We found some offers !",
         offerFound: searchOffer,
       });
+    } else {
+      const searchOffer = await Offer.find();
+      res.status(200).json({
+        message: "We found some offers !",
+        offerFound: searchOffer,
+      });
     }
   } catch (error) {
     return res.status(400).json({

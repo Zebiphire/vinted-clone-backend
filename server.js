@@ -18,6 +18,8 @@ const userRoutes = require("./routes/users");
 app.use(userRoutes);
 const offerRoutes = require("./routes/offers");
 app.use(offerRoutes);
+const paymentRoutes = require("./routes/payment");
+app.use(paymentRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log("*** ========= Server has started ========= ***");
